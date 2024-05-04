@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=5 \
+CUDA_VISIBLE_DEVICES=0 \
 python3 inference.py \
 --meta_arch motr_unincost_clip \
 --dataset_file e2e_refer_kitti \
