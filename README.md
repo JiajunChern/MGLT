@@ -82,6 +82,6 @@ This project is under the MIT license. See [LICENSE](https://github.com/JiajunCh
 
 ## Acknowledgements
 
-Our project is based on [RMOT](https://github.com/wudongming97/RMOT) and
-[CO-MOT](https://github.com/megvii-research/MOTR). Many thanks to these excellence works.
+Our project is based on [RMOT](https://github.com/wudongming97/RMOT) and 
+[CO-MOT](https://github.com/BingfengYan/CO-MOT). Many thanks to these excellence works.
 
