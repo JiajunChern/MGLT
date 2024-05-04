@@ -1,0 +1,30 @@
+CUDA_VISIBLE_DEVICES=5 \
+python3 inference.py \
+--meta_arch motr_unincost_clip \
+--dataset_file e2e_refer_kitti \
+--epoch 200 \
+--with_box_refine \
+--lr_drop 100 \
+--lr 2e-4 \
+--lr_backbone 2e-5 \
+--batch_size 1 \
+--sample_mode random_interval \
+--sample_interval 1 \
+--sampler_steps 50 90 150 \
+--sampler_lengths 2 3 4 5 \
+--update_query_pos \
+--merger_dropout 0 \
+--dropout 0 \
+--random_drop 0.0 \
+--fp_ratio 0.3 \
+--query_interaction_layer GQIM_CLIP \
+--append_crowd \
+--extra_track_attn \
+--resume exps/default/checkpoint0099.pth \
+--output_dir exps/default \
+--match_type gmatch \
+--g_size 3 \
+--num_queries 300 \
+--prob_threshold 0.7  \
+--refer_threshold 0.5 \
+--visualization

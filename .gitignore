@@ -1,0 +1,43 @@
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.pyd
+*.so
+*.dll
+*.egg-info/
+build/
+dist/
+wheels/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+*.ts
+model_ts*.txt
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# project dirs
+checkpoints/
+.DS_Store
+
+
+# editor settings
+exps/
+.idea
+.vscode
+_darcs
+tracker*/
+tmp
+logs/
+weights/

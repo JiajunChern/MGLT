@@ -1,0 +1,28 @@
+CUDA_VISIBLE_DEVICES=0,2,3 \
+python3 -m torch.distributed.launch --nproc_per_node=3 \
+--use_env main.py \
+--meta_arch motr_unincost_clip \
+--dataset_file e2e_refer_kitti \
+--epoch 100 \
+--with_box_refine \
+--lr_drop 50 \
+--lr 1e-4 \
+--lr_backbone 1e-5 \
+--pretrained weights/r50_deformable_detr_plus_iterative_bbox_refinement-checkpoint.pth \
+--output_dir exps/default \
+--batch_size 1 \
+--sample_mode random_interval \
+--sample_interval 1 \
+--sampler_steps 60 80 90 \
+--sampler_lengths 2 2 2 2 \
+--merger_dropout 0 \
+--dropout 0 \
+--random_drop 0.1 \
+--fp_ratio 0.3 \
+--query_interaction_layer GQIM_CLIP \
+--append_crowd \
+--data_txt_path_train ./datasets/data_path/refer-kitti.train \
+--match_type gmatch \
+--g_size 3 \
+--num_queries 300 \
+--num_sentences 6

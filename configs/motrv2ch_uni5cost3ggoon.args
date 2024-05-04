@@ -1,0 +1,48 @@
+--meta_arch motr_unincost
+--dataset_file e2e_dance
+--epoch 20
+--with_box_refine
+--lr_drop 8
+--lr 2e-4
+--lr_backbone 2e-5
+--pretrained xx/checkpoint0019.pth
+--batch_size 1
+--sample_mode random_interval
+--sample_interval 10
+--sampler_lengths 5
+--merger_dropout 0
+--dropout 0
+--random_drop 0.1
+--fp_ratio 0.3
+--query_interaction_layer GQIM
+--num_queries 60
+--append_crowd
+--use_checkpoint
+--mot_path xxx/data/
+--match_type gmatch
+--g_size 3
+
+
+
+--meta_arch motr_unincost_clip
+--dataset_file e2e_refer_kitti
+--epoch 20
+--with_box_refine
+--lr_drop 8
+--lr 2e-4
+--lr_backbone 2e-5
+--pretrained weights/r50_deformable_detr_plus_iterative_bbox_refinement-checkpoint.pth
+--batch_size 1
+--sample_mode random_interval
+--sample_interval 10
+--sampler_lengths 5
+--merger_dropout 0
+--dropout 0
+--random_drop 0.1
+--fp_ratio 0.3
+--query_interaction_layer GQIM_CLIP
+--num_queries 60
+--append_crowd
+--use_checkpoint
+--match_type gmatch
+--g_size 3
