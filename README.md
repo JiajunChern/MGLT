@@ -2,16 +2,6 @@
 
 The official PyTorch implementation of the paper "Multi-granularity Localization Transformer with Collaborative Understanding for Referring Multi-Object Tracking".
 
-Referring Multi-Object Tracking (RMOT) involves localizing and tracking specific objects in video frames by utilizing linguistic prompts as references. 
-To enhance the effectiveness of linguistic prompts when training, 
-we introduce a novel Multi-Granularity Localization Transformer with collaborative understanding, termed MGLT. 
-Unlike previous methods focused on visual-language fusion and post-processing, 
-MGLT reevaluates RMOT by preventing linguistic clues attenuation during propagation and poor collaborative localization ability.
-MGLT comprises two key components: Multi-Granularity Implicit Query Bootstrapping (MGIQB) and Multi-Granularity Track-Prompt Alignment (MGTPA). 
-MGIQB ensures that tracking and linguistic features are preserved in later layers of network propagation by bootstrapping the model to generate text-relevant and temporal-enhanced track queries. \revised{Simultaneously, MGTPA with multi-granularity linguistic prompts enhances the model's localization ability by understanding the relative positions of different referred objects within a frame.} Extensive experiments on well-recognized benchmarks demonstrate that MGLT achieves state-of-the-art performance. 
-Notably, it shows significant improvements on Refer-KITTI dataset of 2.73%, 7.95% and 3.18% in HOTA, AssA, and IDF1, respectively. 
-
-
 ## Framework
 
 <div align=center><img src="assets/network.jpg" /></div>
