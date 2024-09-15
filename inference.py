@@ -456,7 +456,7 @@ class Detector(object):
 
         with open(txt_path, 'w') as f:
             for k in json_info['label'].keys():
-                frame_id = int(k) + 1
+                frame_id = int(k)
                 if not os.path.isfile(os.path.join(gt_txt_file, '{:06d}.txt'.format(frame_id))):
                     continue
                 frame_gt = np.loadtxt(
