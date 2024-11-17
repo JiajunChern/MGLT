@@ -64,6 +64,7 @@ The main results of MGLT:
 This project is under the MIT license. See [LICENSE](https://github.com/JiajunChern/MGLT/blob/main/LICENSE) for details.
 
 ## Update
+- 2024.11.17 Accepted by IEEE TIM.
 
 - 2024.5.8 Release code and checkpoint.
 
